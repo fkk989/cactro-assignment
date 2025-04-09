@@ -2,6 +2,10 @@
 
 A backend API built using **Node.js**, **Express**, **MongoDB**, and **TypeScript**, with schema validation powered by **Zod**. This project supports user authentication and task management, and can run with or without Docker.
 
+#### postman collection is in
+
+- ./postman-collection/cactro-assignment-collection
+
 ---
 
 ## 🧰 Tech Stack

@@ -3,3 +3,4 @@ node_modules
 tsconfig.tsbuildinfo
 dist
 build
+.DS_Store
