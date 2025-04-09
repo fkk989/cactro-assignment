@@ -19,6 +19,7 @@ export const signup = async (req: Request<{}, {}, TUserSignupInput>, res: Respon
       return;
     }
 
+    // password will be hashed before saving using the pre function in task.model.ts
     const user = await User.create({
       name: name.trim(),
       email: email.toLowerCase().trim(),

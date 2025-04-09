@@ -2,7 +2,7 @@ import { createResponse } from "../../utils/helpers";
 import { Request, Response, NextFunction } from "express";
 import { ZodSchema } from "zod";
 
-export const validate =
+export const validateInput =
   (schema: ZodSchema<any>) => (req: Request, res: Response, next: NextFunction) => {
     try {
       const result = schema.safeParse(req.body);

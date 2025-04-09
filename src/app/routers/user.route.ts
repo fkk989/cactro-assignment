@@ -1,5 +1,5 @@
 import { Router } from "express"
-import { validate } from "../middlewares/validate"
+import { validateInput } from "../middlewares/validateInput"
 import { userLoginSchema, userSignupSchema } from "../validation/user.validation"
 import { getUser, login, signup } from "../controllers/user.controller"
 import { verifyUserToken } from "../middlewares/verifyUserToken"
@@ -7,8 +7,8 @@ import { verifyUserToken } from "../middlewares/verifyUserToken"
 
 export const userRouter = Router()
 
-userRouter.post("/signup", validate(userSignupSchema), signup)
+userRouter.post("/signup", validateInput(userSignupSchema), signup)
 
-userRouter.post("/login", validate(userLoginSchema), login)
+userRouter.post("/login", validateInput(userLoginSchema), login)
 
 userRouter.get("/", verifyUserToken(["USER"]), getUser)
